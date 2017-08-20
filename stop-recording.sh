@@ -1,10 +1,3 @@
 #!/bin/bash -x
 
-pipe=/tmp/recordpipe
-
-if [[ ! -p $pipe ]]; then
-  mkfifo $pipe
-fi
-
-echo "stop" >$pipe 
-
+{ echo "stop"; sleep 0.1; } | telnet localhost 50123

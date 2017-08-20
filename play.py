@@ -6,7 +6,7 @@ import os.path
 import random
 import glob
 
-recordingsDir = "/Users/seth/Documents/recordings"
+import settings
 
 
 outputDevices = ["Fast Track", "Built-in Output"]
@@ -55,7 +55,7 @@ while True:
     
     audioFile = None
     while audioFile == lastFile or audioFile is None:
-        files = glob.glob(recordingsDir + '/*.flac')
+        files = glob.glob(settings.RECORDINGS_DIR + '/*.' + settings.FILE_FORMAT)
         audioFile = random.choice(files)
     
     lastFile = audioFile

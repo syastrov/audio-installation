@@ -1,3 +1,23 @@
-Python
-sox (for playing audio)
-ffmpeg (for recording audio)
+Some scripts for an audio installation.
+
+Recordings are triggered using a flic Bluetooth button.
+Then, recordings are played back randomly on one of four different speakers.
+
+
+Requirements:
+  Python 2 (comes by default on Mac OS X)
+  sox (for playing audio)
+  ffmpeg (for recording audio)
+
+
+settings.py: Settings for where to store the recordings, etc.
+
+record-server.py: Listens for commands to record and stop recording.
+  Stores the recordings in the recordings directory.
+
+play.py: Plays back the recordings
+
+start-recording.sh/stop-recording.sh: Scripts to be used to trigger
+  starting/stopping recording.
+  Meant to be called by a Flic Bluetooth button when the button is
+  pressed/released, respectively.
